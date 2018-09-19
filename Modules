@@ -1,0 +1,24 @@
+Typescript uses ES6 modules.
+
+Interfaces are like a contracts.
+We can also import interfaces via modules.
+
+import { IShip } from './IShip';
+
+export class Ship implements IShip{
+  private shipName: string;
+  
+  public get name(){
+    return this.shipName;
+  }
+
+  public takeOff: void{
+    //implement something
+  }
+}
+
+
+Redused Typo.
+Reduced refactoring mistakes.
+
+Type safity
