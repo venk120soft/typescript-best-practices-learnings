@@ -1,0 +1,24 @@
+Typescript 
+
+Defination: typescript is a statically typed variant of javascript which compiles to Javascript.
+
+Features:
+Static Typing
+Classes and Interfaces
+Moudules
+Compiles to Javascript
+
+Static typing means, when we declare a variable with string number, boolean etc.. that type can't be changed . 
+
+function combineNames(first : string, second: string)
+{
+return first+ " "+ second;
+}
+const firstName: string ="Venkatesh";
+const secondName: string="CH";
+
+combineNames(firstName, secondName)// in case if you gives here number then you will get the compile time error this is what static typing.
+
+
+
+
