@@ -1,0 +1,33 @@
+Classes and Interfaces.
+
+interface IPerson{
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+//creating the variable of type 
+const myVariable: IPerson = {
+  firstName: 'Venkatesh',
+  lastName:'CH',
+  age:'29'
+}
+//While you are using the type as Interface, then It should have same number of properties(should not be less or more) and the type of the properties should be same.
+
+// Extending the Interfaces in Class.
+
+interface IShip{
+  name: string;
+  takeOff(): void;
+}
+
+class Ship implements IShip{
+  private shipName: string;
+  
+  public get name(){
+  return this.shipName;
+  }
+  public takeOff(): void{
+  //implement something
+  }
+}
