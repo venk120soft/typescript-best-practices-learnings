@@ -1,0 +1,12 @@
+FatArrowFunctions are the feature in ES6, Helps to solve some problems and made readable code
+
+Normal functions:
+function myFunction(number){
+return number*number;
+}
+can be replaced with below
+const myFunction=(number)=>number*number;
+
+const myFunction={
+talk(){}
+}
