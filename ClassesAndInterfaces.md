@@ -11,10 +11,31 @@ interface IPerson{
 }
 
 // Extending the Interfaces in other interface.
-interface IPersonFull extends IPerson{
-  fullName:string;
+interface IPersonFullState extends IPerson{
+   flag: boolean;
+}
+
+// Extending the Interfaces in other interface.
+interface IPersonFullProps extends IPerson{
+  'full-name': string; // different way of creating the prop
   phoneNumber?: string; // this is an optional 
   address?: string; 
+}
+
+class MyComponent extends React.Component<IPersonFullProps,IPersonFullState>{
+  constructor(props){
+    super(props);
+    this.state={flag:false};
+  }
+  public render(){
+    return (
+    <div>
+    {this.state.flag? 
+        this.props['full-name'] // accessing the differnt way of props
+        : this.props.phoneNumber}
+    </div>
+    )
+  }
 }
 
 interface IShip extends IPerson{
