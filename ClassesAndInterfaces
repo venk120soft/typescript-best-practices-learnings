@@ -1,26 +1,28 @@
-Classes and Interfaces.
+## Classes and Interfaces.
 
+Interfaces usually help us to define the type of model like what properties does it contain.
+It restricts the values to be passed in. 
+
+```javascript
 interface IPerson{
   firstName: string;
   lastName: string;
   age: number;
 }
 
-//creating the variable of type 
-const myVariable: IPerson = {
-  firstName: 'Venkatesh',
-  lastName:'CH',
-  age:'29'
+// Extending the Interfaces in other interface.
+interface IPersonFull extends IPerson{
+  fullName:string;
+  phoneNumber?: string; // this is an optional 
+  address?: string; 
 }
-//While you are using the type as Interface, then It should have same number of properties(should not be less or more) and the type of the properties should be same.
+
+interface IShip extends IPerson{
+  takeOff(): void;
+  name:string;
+}
 
 // Extending the Interfaces in Class.
-
-interface IShip{
-  name: string;
-  takeOff(): void;
-}
-
 class Ship implements IShip{
   private shipName: string;
   
@@ -31,3 +33,24 @@ class Ship implements IShip{
   //implement something
   }
 }
+
+//creating the variable of type IPerson
+const myVariable: IPerson = {
+  firstName: 'Venkatesh',
+  lastName:'CH',
+  age:'29'
+}
+```
+While you are using the type as Interface, then It should have same number of properties(should not be less or more of required params)
+'?' is used to create an optional params
+
+In the same way type also help us to create the model but it cannot extend other types
+
+```javascript
+type myNotebook ={
+  name:string,
+  price:string,
+  noOfPages:number
+}
+```
+
