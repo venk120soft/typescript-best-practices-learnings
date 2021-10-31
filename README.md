@@ -1,6 +1,5 @@
-# typescriptBestPracticesLearnings
+# Typescript Best Practices Learnings
 Typescript Learning
-
 
 I have added the concepts to Improve Wesite Performance using Debouncing and Throttling
 
