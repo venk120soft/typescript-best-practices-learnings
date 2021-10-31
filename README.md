@@ -51,7 +51,6 @@ const debounce = (callback, wait) => {
   };
 }
 
-
 // the function that you want to be debounced
 function doStuff(){
     // do some stuff
