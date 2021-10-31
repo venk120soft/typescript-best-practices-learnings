@@ -112,5 +112,6 @@ Is React Application Declarative or Imperative?
 React application is Declarative.
 
 ## Web Workers In javascript
-
+Web Workers makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
+[more info](https://github.com/venk120soft/Javasript-learnings#web-workers-in-javascript)
 ## pass by Value vs pass by Ref in javascript
