@@ -5,14 +5,62 @@ Typescript Learning
 I have added the concepts to Improve Wesite Performance using Debouncing and Throttling
 
 ## Throttling and Debouncing
+#### Throttling
 Throttling is a technique in which, no matter how many times the user fires the event, 
 the attached function will be executed only once in a given time interval.
 setTimeOut can be used for this
 
+Throttling enforces a maximum number of times a function can be called over time. As in "execute this function at most once every 100 milliseconds."
+```javascript
+// our simple throttle function
+function throttle (callback, limit) {
+    var wait = false;                  // Initially, we're not waiting
+    return function () {               // We return a throttled function
+        if (!wait) {                   // If we're not waiting
+            callback.call();           // Execute users function
+            wait = true;               // Prevent future invocations
+            setTimeout(function () {   // After a period of time
+                wait = false;          // And allow future invocations
+            }, limit);
+        }
+    }
+}
+
+// the function that you want to be throttled
+function doStuff(){
+    // do some stuff
+}
+
+// On scroll, allow function to run at most 1 time per 100ms
+window.addEventListener("scroll", throttle(doStuff, 100));
+```
+#### Debouncing
 In the debouncing technique, no matter how many times the user fires the event, 
 the attached function will be executed only after the specified time once the user stops firing the event.
 setTimeOut and clearTimeout(timerId) can be used to implement this.
 
+In this example, nothing will happen until the user starts moving the mouse, and then stops moving it for at least 250ms.
+```javascript
+const debounce = (callback, wait) => {
+  let timeoutId = null;
+  return (...args) => {
+    window.clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(() => {
+      callback.apply(null, args);
+    }, wait);
+  };
+}
+
+
+// the function that you want to be throttled
+function doStuff(){
+    // do some stuff
+}
+
+// In this example, nothing will happen until the user starts moving the mouse, and then stops moving it for at least 250ms.
+window.addEventListener("scroll", debounce(doStuff, 500));
+
+```
 [more info](https://github.com/venk120soft/typescriptBestPracticesLearnings/blob/master/Throttling%26Debouncing)
 
 ## DeepCopy and Shallow Copy:
