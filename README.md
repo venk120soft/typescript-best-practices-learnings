@@ -52,13 +52,13 @@ const debounce = (callback, wait) => {
 }
 
 
-// the function that you want to be throttled
+// the function that you want to be debounced
 function doStuff(){
     // do some stuff
 }
 
 // In this example, nothing will happen until the user starts moving the mouse, and then stops moving it for at least 250ms.
-window.addEventListener("scroll", debounce(doStuff, 500));
+window.addEventListener("mousemove", debounce(doStuff, 500));
 
 ```
 [more info](https://github.com/venk120soft/typescriptBestPracticesLearnings/blob/master/Throttling%26Debouncing)
