@@ -79,8 +79,7 @@ https://javascript.info/bubbling-and-capturing
   </div>
 </form>
 ```
-Consider above code,
-The standard DOM Events describes 3 phases of event propagation:
+Consider above code, The standard DOM Events describes 3 phases of event propagation:
 
 Capturing phase – the event goes down to the element. [from top element to Bottom]
 Target phase – the event reached the target element. [right to the current element(target)]
