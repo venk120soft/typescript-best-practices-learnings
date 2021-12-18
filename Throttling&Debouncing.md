@@ -1,27 +1,29 @@
 Debouncing and Throtling enhances to improve website performance. (by limiting/minimizing series of event fires into few event calls)
+Examples include window resizing, scrolling for Throttling and search functionality for debouncing
 
-Throttling:
-----------
+# Difference between Throttling and Debouncing?
+The main difference between throttling and debouncing is that throttling executes the function at a regular interval, 
+while debouncing executes the function only after some cooling period.
+
+## Throttling:
 Throttling is a technique in which, no matter how many times the user fires the event, 
 the attached function will be executed only once in a given time interval.
 setTimeOut(callbackFunction, delayInMilliseconds) can be used to implement this
 
-Debouncing:
-----------
+Examples: window resizing and scrolling
+## Debouncing:
 In the debouncing technique, no matter how many times the user fires the event, 
 the attached function will be executed only after the specified time once the user stops firing the event.
 setTimeOut(callbackFunction, delayInMilliseconds) and clearTimeout(timerId) can be used to implement this
 
-When you need to implement Debouncing and throttling?
+Example: search functionality on textbox
+### When you need to implement Debouncing and throttling?
 A: Debouncing and throttling are recommended to use on events that a user can fire more often than you need them to.
 Examples include window resizing and scrolling and search functionality 
 
 Let's say we have heavy computations or fetching data on each event(on search tex change) firing then we can make use of this.
 on each key the user has entered we call api to fetch the data, to avoid this let's wait for sometime until the user has entered the text 
 ex: wait for 200 sec then  pass the text. in this way we can avoid multiple api calls hitting to the server.
-
-The main difference between throttling and debouncing is that throttling executes the function at a regular interval, 
-while debouncing executes the function only after some cooling period.
 
 ```javascript
 // Debounce function: Input as function which needs to be debounced and delay is the debounced time in milliseconds
