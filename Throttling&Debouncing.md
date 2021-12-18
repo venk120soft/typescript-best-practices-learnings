@@ -1,4 +1,5 @@
 Debouncing and Throtling enhances to improve website performance. (by limiting/minimizing series of event fires into few event calls)
+
 Examples include window resizing, scrolling for Throttling and search functionality for debouncing
 
 # Difference between Throttling and Debouncing?
