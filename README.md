@@ -60,7 +60,7 @@ window.addEventListener("mousemove", debounce(doStuff, 500));
 ```
 [more info](https://github.com/venk120soft/typescriptBestPracticesLearnings/blob/master/Throttling%26Debouncing)
 
-## DeepCopy and Shallow Copy:
+## Deep Copy and Shallow Copy:
 When DeepCopy is done, when we make changes to the copy variable it won't reflect to the original variable.
 Whereas ShallowCopy do reflect the changes to original
 
@@ -102,7 +102,7 @@ In a controlled component, form data is handled by a React component. The altern
 
 To write an uncontrolled component, instead of writing an event handler for every state update, you can use a ref to get form values from the DOM.
 
-What is the difference between Controlled and un controlled components?
+#### What is the difference between Controlled and un controlled components?
 
 ##### What is the difference between declarative and Imperative programming?
 Imperative programming is something like instructing a machine what to do step by step. ex: assembly language
