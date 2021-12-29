@@ -16,6 +16,7 @@ const myFunction=(number)=>number*number;
 where as for arrow functions we dont have internal scope, so it uses the lexical scope, on calling this referes to lexical(immediate parent) scope.
 2) By default if we dont pass anything to normal functions, we can access the arguments in it.
 3) For arrow functions if you want to access params we must pass args, since auto-binding is not available by default in ES6.
+```
 Ex: function test(){                           
   console.log(arguments[0] );
 }
@@ -30,7 +31,7 @@ const test1=(...something)=>{
 console.log(something[0])
 }
 // test1("Hello") // o/p: Hello
-
+```
 ## 1) Why do we use arrow functions in react? and what is the advantage of using arrow functions?
 Ans: Arrow functions does not have its own 'this', so it takes from its lexical scope(immediate class scope).
 functions have its own 'this' that is the reason we are going for arrow functions and implemnting the properties.
@@ -38,13 +39,13 @@ i.e it allows to bind the context of components properly since auto-binding is n
 So when we use arrow functions, the scope points to the lexical hence binding the functions is not necessary
 .
 ### Explanation:
-In react, we can have onClick handles, which is actually a properties of a class. If you want to access the this keyword inside the function inside the function then that would points to within thhe scope not the global scope.
-so the solution is we can create arrow functions and use this keywords whhichh points to class scope.
-also we can bind this property inside the constructor.
+In react, we can have onClick handles, which is actually a properties of a class. If you want to access **this** keyword inside the function then that would points to within the scope not the global scope.
+so the solution is we can create arrow functions and use **this** keywords which points to the class scope.
+also we can bind **this** property inside the constructor.
 
 ### Key-Factors:
 By default Auto-Binding is not available in ES6, So on handling the events, if we use functions we need to bind the functions.
-As FatArrowFunctions does not have its own this and uses its immediate class scope then we no need to bind this arrow function 
+As FatArrowFunctions does not have its own **this** and uses its immediate class scope then we no need to bind this arrow function 
 
 Ex:
 ```
