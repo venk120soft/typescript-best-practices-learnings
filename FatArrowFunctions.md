@@ -14,7 +14,7 @@ const myFunction=(number)=>number*number;
 ## What is the differnce between fat arrow functions and normal functions.
 1) The main difference is, In normal functions we will have internal scope and external scope and while using 'this', it refers to internal scope.
 where as for arrow functions we dont have internal scope, so it uses the lexical scope, on calling this referes to lexical(immediate parent) scope.
-2) By default if we dont pass anything to normal functions, we can access the arguments in it.
+2) By default if we dont pass anything to normal functions, we can access the arguments in it. Due to Javascript nature of accessing the elements from current object **this**
 3) For arrow functions if you want to access params we must pass args, since auto-binding is not available by default in ES6.
 ```
 Ex: function test(){                           
